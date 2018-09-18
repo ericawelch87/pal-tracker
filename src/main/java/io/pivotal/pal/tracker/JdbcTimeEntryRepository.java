@@ -82,7 +82,7 @@ public class JdbcTimeEntryRepository implements TimeEntryRepository{
 
             return queryResult;
         }catch(EmptyResultDataAccessException ex){
-            return null;
+            return new ArrayList<TimeEntry>();
         }
     }
 
