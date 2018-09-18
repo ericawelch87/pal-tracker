@@ -37,6 +37,10 @@ public class TimeEntry {
         this.hours = hours;
     }
 
+    public TimeEntry(long id, TimeEntry timeEntryToCopy){
+        this(id,timeEntryToCopy.getProjectId(), timeEntryToCopy.getUserId(), timeEntryToCopy.getDate(), timeEntryToCopy.getHours());
+    }
+
     public long getId() {
         return id;
     }

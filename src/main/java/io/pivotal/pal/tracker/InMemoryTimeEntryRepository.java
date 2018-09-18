@@ -12,7 +12,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
     public TimeEntry create(TimeEntry inTimeEntry) {
         TimeEntry timeEntryToCreate = inTimeEntry;
         if (!hasIdDefined(timeEntryToCreate)){
-            timeEntryToCreate = new TimeEntry(new Long(timeEntryMap.size()+1),inTimeEntry.getProjectId(), inTimeEntry.getUserId(), inTimeEntry.getDate(), inTimeEntry.getHours());
+            timeEntryToCreate = new TimeEntry(new Long(timeEntryMap.size()+1),inTimeEntry);
         }
         timeEntryMap.put(timeEntryToCreate.getId(),timeEntryToCreate);
         return find(timeEntryToCreate.getId());
