@@ -6,3 +6,4 @@ applications:
   - route: http://pal-tracker-erica-review.apps.evans.pal.pivotal.io
   env:
     WELCOME_MESSAGE: Hello from the review environment
+    HTTPS_DISABLED: false
